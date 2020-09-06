@@ -29,12 +29,34 @@
       </div>
         
       <div id="memories-container">
-        <div class="title">Park Memories</class>
+        <div class="title">
+          Park Memories
         </div>
-        <div id="memories-list">
-          
+        <div class="nest-memories-container">
+          <div class="memories-list-container">
+            memories list container area
+          </div>
+          <div class="memories-submit-form-container">
+            submit form
+            <form class="memory-form" id="form" method="post">
+              <ul>
+                <li>
+                  <textarea
+                  class="memory-input"
+                  name="memory"
+                  placeholder="Add your memory..."
+                  ></textarea>
+                </li>
+                <li>
+
+                  <button class="memory-button" type="submit">Save</button>
+                </li>
+              </ul>
+            </form>
+          </div>
         </div>
       </div>
+
       <div id="photos-container">
         <div class="title">Photos</class>
         </div>
