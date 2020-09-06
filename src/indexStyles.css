@@ -1,0 +1,78 @@
+* {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+  padding: 20px;
+  text-align: center;
+  background-color: #fafafa;
+}
+
+.logo {
+  margin-bottom: 20px;
+}
+
+.header{
+  border: 1px solid #00000020;
+  height: 100px;
+  width: 100%; 
+  background-color: pink; 
+  padding: 2%; 
+}
+
+.map-container{
+  border: 1px solid #f4030320;
+  height: 500px;
+  width: 40%;
+  float: left;
+  background-color:green;
+  padding: 2%; 
+  margin-left: 1.5%;
+  margin-top: 1%;
+  margin-bottom: 1%;
+}
+
+.park-container{
+    border: 1px solid #f4030320;
+    height: 500px;
+    width: 48%;
+    float: right;
+    background-color: brown;
+    padding: 2%; 
+    margin-left: 1.5%;
+    margin-top: 1%;
+    margin-bottom: 1%;
+}
+.memories-container{
+    border: 1px solid #f4030320;
+    height: 500px;
+    width: 50%;
+    float: right;
+    background-color: purple;
+    padding: 2%; 
+    margin-left: 1.5%;
+    margin-top: 1%;
+    margin-bottom: 1%;
+}
+.photos-container{
+    border: 1px solid #7303f420;
+    height: 500px;
+    width: 50%;
+    float: right;
+    background-color: yellow;
+    padding: 2%; 
+    margin-left: 1.5%;
+    margin-top: 1%;
+    margin-bottom: 1%;
+}
+
+.footer{
+  border: 5px solid #f4030320;
+  height: 50px;
+  width: 100%; 
+  clear: both;
+  padding: 2%; 
+  margin-left:;
+  margin-top: 2%;
+}
