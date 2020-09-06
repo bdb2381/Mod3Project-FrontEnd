@@ -1,5 +1,4 @@
 * {
-  
   font-family:  Helvetica, sans-serif;
 }
 
@@ -38,6 +37,78 @@ body {
   /* flex: 1; */
 }
 
+/* memory form */
+form {
+  /* Center the form on the page */
+  margin: 0 auto;
+  width: auto;
+  /* Form outline */
+  padding: .5em;
+  border: 1px solid #CCC;
+  border-radius: 1em;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+form li + li {
+  margin-top: 1em;
+}
+
+input, 
+textarea {
+  /* To make sure that all text fields have the same font settings
+     By default, textareas have a monospace font */
+  font: 1em sans-serif;
+
+  /* Uniform text field size */
+  width: 100%;
+  height: auto;
+  box-sizing: border-box;
+
+  /* Match form field borders */
+  border: 1px solid #999;
+}
+
+
+textarea {
+  /* Align multiline text fields with their labels */
+  vertical-align: top;
+
+  /* Provide space to type some text */
+  height: 8em;
+}
+
+.memory-button {
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: rgb(92, 114, 238);
+  cursor: pointer;
+  transition: color 300ms;
+}
+
+.memory-button:hover {
+  color: rgb(37, 68, 245);
+}
+
+.memory-button:active {
+  color: rgb(127, 146, 250);
+}
+
+.memory-button:focus {
+  outline: none;
+}
+
+
+
+
+
+
+
+
 
 
 
@@ -71,7 +142,7 @@ body {
 }
 #memories-container{
   grid-area: memories-container;
-    border: .25rem solid #000000;
+  border: .1rem solid #000000;
     height: 500px;
     padding: 2%; 
    
