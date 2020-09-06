@@ -65,31 +65,40 @@ body {
 }
 
 
-.title{
+/* all section titles/headers   */
+ .title{
   font-size: 26px; 
   font-weight: 300; 
   color: #000000; 
   margin: .2em 0 1em;
   text-align: center; 
 }
-#states{
+
+/* the location of the park as from the API */
+#states{ 
   margin: 0 0 10px; 
 }
 
+/* the park nickname from the API */
 #park-code{
   margin: 0 0 10px;
 }
+
+/* url for the park website from API */
 #url{
   text-align: right;
   color: #eb0b0b;
   margin: 0 0 10px;
 }
 
+/* description from the API */
 #park-description{
 font-size: 1.1rem;
 letter-spacing: 0.05em;
 margin: .2em;
 }
+
+
 
 
 
