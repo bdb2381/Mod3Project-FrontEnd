@@ -1,6 +1,6 @@
 * {
   
-  font-family: Arial, Helvetica, sans-serif;
+  font-family:  Helvetica, sans-serif;
 }
 
 body {
@@ -59,7 +59,19 @@ body {
     height: 500px;
     padding: 2%; 
 }
-    
+
+
+.title{
+  font-size: 26px; 
+  font-weight: 300; 
+  color: #000000; 
+  margin: 0 0 24px; 
+
+}
+
+
+
+
 
 .footer{
   border: .25rem solid #000000;
