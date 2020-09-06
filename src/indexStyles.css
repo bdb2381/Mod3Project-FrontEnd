@@ -42,9 +42,13 @@ body {
 
 #park-container{
   grid-area: park-container;
-    border: .25rem solid #000000;
-    height: 500px;
+    border: .1rem solid #000000;
+    height: auto;
     padding: 2%; 
+    font-size: 20px; 
+    font-weight: 300; 
+    color: #000000; 
+    text-align: left;
 }
 #memories-container{
   grid-area: memories-container;
@@ -65,11 +69,27 @@ body {
   font-size: 26px; 
   font-weight: 300; 
   color: #000000; 
-  margin: 0 0 24px; 
-
+  margin: .2em 0 1em;
+  text-align: center; 
+}
+#states{
+  margin: 0 0 10px; 
 }
 
+#park-code{
+  margin: 0 0 10px;
+}
+#url{
+  text-align: right;
+  color: #eb0b0b;
+  margin: 0 0 10px;
+}
 
+#park-description{
+font-size: 1.1rem;
+letter-spacing: 0.05em;
+margin: .2em;
+}
 
 
 
