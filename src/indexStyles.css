@@ -23,8 +23,12 @@ body {
 }
 
 
-
-
+/* STYLES THE MEMORIES */
+#memories-container{
+  grid-area: memories-container;
+  border: .1rem solid #000000;
+  padding: 2%;   
+}
 
 /* holds two columns, the memory list and submit form */
 .nest-memories-container{
@@ -87,6 +91,7 @@ textarea {
   height: 8em;
 }
 
+/* style the save memory button */
 .memory-button {
   font-size: 0.8rem;
   font-weight: 600;
@@ -106,12 +111,13 @@ textarea {
 .memory-button:focus {
   outline: none;
 }
-
+/* end styles for memories */
 
 
 
 .grid-container{
   display: grid;
+  border: .2em solid black;
   /* grid-template-columns: auto auto; */
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-areas:
@@ -121,10 +127,12 @@ textarea {
   grid-template: auto;
 }
 
+
+/* STYLES THE MAP */
 #map-container{
   grid-area: map-container;
   /* border: .1rem solid #000000; */
-  height: 500px;
+  height: auto;
 }
 
 /* style the Google Map */
@@ -132,32 +140,28 @@ textarea {
   height: 95%;
 
 }
+/* end styles of map */
 
 
 
-#park-container{
-  grid-area: park-container;
-    /* border: .1rem solid #000000; */
-    height: auto;
-    padding: 2%; 
-    font-size: 20px; 
-    font-weight: 300; 
-    color: #000000; 
-    text-align: left;
-}
-#memories-container{
-  grid-area: memories-container;
-  border: .1rem solid #000000;
-    height: 500px;
-    padding: 2%; 
-   
-}
+
+
+
 #photos-container{
   grid-row: photos-container;
-    border: .25rem solid #000000;
-    height: 500px;
+    border: .1rem solid #000000;
     padding: 2%; 
 }
+
+
+img {
+  border: .1rem solid #000000;
+  border-radius: 4px;
+  /* padding: 5px; */
+  width: 300px;
+  margin: 19px 10px 5px 10px;
+}
+
 
 
 /* all section titles/headers   */
@@ -169,6 +173,18 @@ textarea {
   text-align: center; 
 }
 
+
+/* STYLES THE PARK CONTENT */
+#park-container{
+  grid-area: park-container;
+    /* border: .1rem solid #000000; */
+    height: auto;
+    padding: 2%; 
+    font-size: 20px; 
+    font-weight: 300; 
+    color: #000000; 
+    text-align: left;
+}
 /* the location of the park as from the API */
 #states{ 
   margin: 0 0 10px; 
@@ -192,7 +208,7 @@ font-size: 1.1rem;
 letter-spacing: 0.05em;
 margin: .2em;
 }
-
+/* end styles of the PARK CONTAINER */
 
 
 
