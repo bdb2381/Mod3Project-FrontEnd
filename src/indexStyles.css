@@ -22,10 +22,7 @@ body {
   
 }
 
-/* style the Google Map */
-#map {
-  height: 100%;
-}
+
 
 
 
@@ -113,13 +110,6 @@ textarea {
 
 
 
-
-
-
-
-
-
-
 .grid-container{
   display: grid;
   /* grid-template-columns: auto auto; */
@@ -133,14 +123,21 @@ textarea {
 
 #map-container{
   grid-area: map-container;
-  border: .25rem solid #000000;
+  /* border: .1rem solid #000000; */
   height: 500px;
-  padding: 2%; 
 }
+
+/* style the Google Map */
+#map {
+  height: 95%;
+
+}
+
+
 
 #park-container{
   grid-area: park-container;
-    border: .1rem solid #000000;
+    /* border: .1rem solid #000000; */
     height: auto;
     padding: 2%; 
     font-size: 20px; 
