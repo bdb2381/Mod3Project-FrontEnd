@@ -28,10 +28,6 @@ function loadApiSource(){
 }
 
 
-
-
-
-
 //////////////////
 // Manipulate the DOM Functions
 
@@ -48,10 +44,7 @@ function renderMap(){
       center: { lat: 44.59824417, lng: -110.5471695 },
       zoom: 8
     });
-  }
-    `
-    
-  
+  } `  
     mapElement.append(mapScriptTag)   
 }
 
@@ -103,6 +96,7 @@ memoryForm.addEventListener("submit",patchNote)
 // notes process start 
 function getNotes(){
 }
+
 function patchNote(event){
     event.preventDefault()
     debugger
