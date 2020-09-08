@@ -22,6 +22,22 @@ body {
   
 }
 
+/* container for map, park, photo, memories */
+.grid-container{
+  display: grid;
+  border: .2em solid black;
+  /* grid-template-columns: auto auto; */
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-areas:
+  'map-container map-container  park-container'
+   'photos-container memories-container memories-container';
+  grid-gap: .25rem;
+  grid-template: auto;
+}
+
+
+
+
 
 /* STYLES THE MEMORIES */
 #memories-container{
@@ -115,17 +131,6 @@ textarea {
 
 
 
-.grid-container{
-  display: grid;
-  border: .2em solid black;
-  /* grid-template-columns: auto auto; */
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-template-areas:
-  'map-container map-container  park-container'
-   'photos-container memories-container memories-container';
-  grid-gap: .25rem;
-  grid-template: auto;
-}
 
 
 /* STYLES THE MAP */
@@ -158,7 +163,8 @@ img {
   border: .1rem solid #000000;
   border-radius: 4px;
   /* padding: 5px; */
-  width: 300px;
+  max-width: 80%;
+  height: auto;
   margin: 19px 10px 5px 10px;
 }
 
