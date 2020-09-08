@@ -6,6 +6,7 @@ body {
   padding: 20px;
   text-align: center;
   background-color: #fafafa;
+  height: 100%;
 }
 
 .logo {
@@ -20,6 +21,13 @@ body {
   padding: 2%; 
   
 }
+
+/* style the Google Map */
+#map {
+  height: 100%;
+}
+
+
 
 /* holds two columns, the memory list and submit form */
 .nest-memories-container{
