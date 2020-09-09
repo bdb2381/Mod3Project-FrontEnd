@@ -6,7 +6,7 @@ const MapsKey = config.GOOGLE_KEY;
 loadApiSource()
 getParkData()
 
-
+initMap()
 
 //////////////////
 // listening functions 
@@ -19,6 +19,7 @@ getParkData()
 
 // load markers to the map 
 function handleMapMarkers(park){
+  // debugger
   let marker = new google.maps.Marker({
     map: map,
     draggable: true,
@@ -27,16 +28,16 @@ function handleMapMarkers(park){
     title: park.name,
     label: park.name
   });
+  // debugger
 }
 
 // load the Google Maps API
 function loadApiSource(){
   const headElement = document.querySelector('head')
   const scriptTag = document.createElement('script')
-  
+  // debugger
   // keeps API out of git via interprolation 
   scriptTag.src = `https://maps.googleapis.com/maps/api/js?key=${MapsKey}&callback=initMap`
-  
   headElement.append(scriptTag)
 }
 
@@ -64,7 +65,8 @@ function getParkData(){
   fetch('http://localhost:3000/parks')
   .then(resp => resp.json())
   .then(parks => {
+    // debugger
     parks.forEach(park => handleMapMarkers(park))
-    
+   
   })
 }
