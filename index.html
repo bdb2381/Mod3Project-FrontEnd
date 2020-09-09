@@ -4,7 +4,7 @@
     <meta charset="utf-8" />
     <title>Park Memories</title>
     <link rel="stylesheet" type="text/css" href="src/indexStyles.css" />
-   
+    <script src="src/index.js"></script>
     
   </head>
   
@@ -22,14 +22,15 @@
         </div>
       </form>
     </div>
-  </div>
+  </div><!--end parks list container  -->
   
     <div class="grid-container">
-      <div id="map-container">
-        <div id="map">
-    
+      <div id="parks-list-container">
+        <div id="Yellowstone">
+    park list
         </div>
-      </div>
+      </div><!--end parks list container  -->
+
       <div id="park-container">
         <div class="title">Yellowstone National Park
         </div>
@@ -41,57 +42,47 @@
         <div id="park-description">
           Visit Yellowstone and experience the world's first national park. Marvel at a volcano's hidden power rising up in colorful hot springs, mudpots, and geysers. Explore mountains, forests, and lakes to watch wildlife and witness the drama of the natural world unfold. Discover the history that led to the conservation of our national treasures 'for the benefit and enjoyment of the people.'
         </div>
-      </div>
+      </div><!--end park container  -->
         
       <div id="memories-container">
         <div class="title">
-          Park Memories
+          What is Your  Memory?
         </div>
-        <div class="nest-memories-container">
-          <div class="memories-list-container">
-            memories list container area
-            <ul id="memories holder">
-              
-            </ul>
-          </div>
+       
           <div class="memories-submit-form-container">
-            submit form
-            <form class="memory-form" id="form" method="post">
-              <ul>
-                <li>
-                  <textarea
-                  class="memory-input"
-                  name="memory"
-                  placeholder="Add your memory..."
-                  ></textarea>
-                </li>
-                <li>
-
-                  <button class="memory-button" type="submit">Save Your Memory</button>
-                </li>
+              <form class="memory-form" id="form" method="post">
+                <ul>
+                  <li>
+                    <textarea
+                    class="memory-input"
+                    name="memory"
+                    placeholder="Add your memory..."
+                    ></textarea>
+                  </li>
+                  <li>
+                    <button class="memory-button" type="submit">Save Your Memory</button>
+                  </li>
+                </ul>
+              </form>
+            </div> <!--end memories submit container  -->
+          </div><!--end submit form container  -->
+      
+        <div id="memories-list-container">
+          <div >
+              memories list container area
+             <ul id="memories holder">
               </ul>
-            </form>
           </div>
-        </div>
-      </div>
+        </div> <!--end memories list container  -->
+      
+      
+      </div>  <!--end grid container  -->
 
-      <div id="photos-container">
-        <div class="title">Photos</class>
-        </div>
-        <div>        
-          <img src="https://www.nps.gov/common/uploads/structured_data/3C7D34E6-1DD8-B71B-0BBB1C0F478318E2.jpg" >
-          <i>Bison in Lamar Valley</i>
-        </div>
-        
-        <div>
-          <img src="https://www.nps.gov/common/uploads/structured_data/3C7D2FBB-1DD8-B71B-0BED99731011CFCE.jpg">
-          <i>Aurum Geyser Erupting</i>
-        </div>
+      
 
 
 
-      </div>
-    </div>
+    
 
   <div class="footer">footer</div>
       

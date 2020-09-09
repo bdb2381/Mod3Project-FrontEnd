@@ -75,10 +75,10 @@ login-form-field::placeholder {
   display: grid;
   border: .2em solid black;
   /* grid-template-columns: auto auto; */
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: .5fr 1fr 1fr;
   grid-template-areas:
-  'map-container map-container  park-container'
-   'photos-container memories-container memories-container';
+  'parks-list-container memories-list-container park-container '
+  'parks-list-container memories-list-container memories-submit-container';
   grid-gap: .25rem;
   grid-template: auto;
 }
@@ -88,22 +88,28 @@ login-form-field::placeholder {
 
 
 /* STYLES THE MEMORIES */
-#memories-container{
+#memories-list-container{
+  grid-row: memories-list-container;
+  border: .1rem solid #000000;
+  padding: 2%; 
+}
+
+#memories-submit-container{
   grid-area: memories-container;
   border: .1rem solid #000000;
   padding: 2%;   
 }
 
 /* holds two columns, the memory list and submit form */
-.nest-memories-container{
+/* .nest-memories-container{
   display: grid;
   grid-template-columns: 1fr 1fr;
 
-}
+} */
 
 /* styles the user submitted memories div */
-.memories-list-container{
-}
+/* .memories-list-container{
+} */
 
 /* styles the column of the form to add a memory */
 .memories-submit-form-container{
@@ -180,16 +186,15 @@ textarea {
 
 
 /* STYLES THE MAP */
-#map-container{
-  grid-area: map-container;
-  /* border: .1rem solid #000000; */
+#parks-list-container{
+  grid-area: parks-list-container;
+  border: .1rem solid #000000;
   height: auto;
 }
 
 /* style the Google Map */
 #map {
   height: 95%;
-
 }
 /* end styles of map */
 
@@ -198,11 +203,6 @@ textarea {
 
 
 
-#photos-container{
-  grid-row: photos-container;
-    border: .1rem solid #000000;
-    padding: 2%; 
-}
 
 
 img {
