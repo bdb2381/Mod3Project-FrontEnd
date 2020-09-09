@@ -41,17 +41,18 @@ login-form-field::placeholder {
   border-bottom: 1px solid #3a3a3a;
   margin-bottom: 10px;
   border-radius: 3px;
-  padding: 0px 0px 5px 5px;
+  padding: 5px 0px 5px 5px;
 }
 
 #login-form-submit {
   width: 25%;
-  padding: 7px;
+  padding: 5px;
   border-radius: 5px;
   color: white;
   font-weight: bold;
   background-color: #3a3a3a;
   outline: none;
+  cursor: pointer;
 }
 /* end login button styles */
 
