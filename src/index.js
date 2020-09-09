@@ -1,4 +1,5 @@
 const MapsKey = config.GOOGLE_KEY;
+
 // config relates to the config{} in configAPI.js
 
 
@@ -54,6 +55,7 @@ function renderMap(){
 sessionStorage.clear()
 const getHeader = document.getElementsByClassName("header")[0]
 sessionStorage.setItem("testpark", 1)
+sessionStorage.setItem("User_id", 1)
 // user login start //
 // need to change memoryForm to whatever the login button is 
 const memoryForm = document.getElementById("form")
@@ -93,18 +95,48 @@ memoryForm.addEventListener("submit",patchNote)
 //     })
 // }
 //user login end 
+
 // notes process start 
 function getNotes(){
 }
+getNotes()
 
 function patchNote(event){
     event.preventDefault()
-    debugger
+    // debugger
+    let data ={text: event.target[0].value,
+               Park_id: sessionStorage.getItem("testpark"),
+               User_id: sessionStorage.getItem("User_id")
+    }
+    fetch(`http://localhost:3000/notes`,{
+                method: "POST",
+                headers: {'Content-Type':'application/json'},
+                body: JSON.stringify(data)
+            })
+            .then(res => res.json())
+            .then (json =>console.log(json))
+            debugger
+    }
+
+
+//test park notes may have to run through all the notes 
+// match up park to to match note Park id 
+function getNotes(){
+    fetch(`http://localhost:3000/notes/1`)
+    .then(res => res.json())
+    .then(res => setMemories(res))
+    // debugger
 }
 
-
-
-
+const grabOl = document.getElementById("memories holder")
+// const newLi = document.createElement("li")
 
 // note process end 
 
+// sets li items to be notes text
+function setMemories(element){
+    let newLi = document.createElement("li")
+    newLi.innerText = element["text"]
+    grabOl.appendChild(newLi)
+    // debugger
+}
