@@ -107,6 +107,7 @@ form {
   margin: 0 auto;
   width: auto;
   padding: .5em;
+  margin: 0 0 .5em;
   border-radius: 1em;
 }
 
@@ -116,22 +117,17 @@ ul {
   margin: 0;
 }
 
-form li + li {
-  margin-top: 1em;
-}
+
 
 input, 
 textarea {
   /* To make sure that all text fields have the same font settings
-     By default, textareas have a monospace font */
-  font: 1em sans-serif;
 
-  /* Uniform text field size */
   width: 100%;
   height: auto;
   box-sizing: border-box;
-
   /* Match form field borders */
+  font-size: 16px;
   border: 1px solid #999;
 }
 
@@ -139,10 +135,16 @@ textarea {
 textarea {
   /* Align multiline text fields with their labels */
   vertical-align: top;
-
+  padding: 10px 20px;
   /* Provide space to type some text */
   height: 8em;
+  width: 90%;
+
 }
+
+
+
+
 
 /* style the save memory button */
 .memory-button {
@@ -151,6 +153,7 @@ textarea {
   color: rgb(92, 114, 238);
   cursor: pointer;
   transition: color 300ms;
+  margin: 1em;
 }
 
 .memory-button:hover {
@@ -172,7 +175,6 @@ textarea {
 img {
   border: .1rem solid #000000;
   border-radius: 4px;
-  /* padding: 5px; */
   max-width: 96%;
   height: auto;
   margin: 1px 1px 22px 1px;
@@ -201,17 +203,9 @@ img {
   height: auto;
 }
 
-.park-listings{
-  
-}
 
 
-
-
-
-
-
-/* STYLES THE A Specific PARK  CONTENT */
+/* STYLES A Specific CONTENT of a PARK */
 #park-container{
   grid-area: park-container;
     /* border: .1rem solid #000000; */
@@ -224,16 +218,16 @@ img {
 }
 
 /* the location of the park as from the API */
-#states{ 
+#state{ 
   margin: 0 0 20px; 
 }
 
 /* url for the park website from API */
-#url{
+/* #url{
   text-align: right;
   color: #eb0b0b;
   margin: 0 0 10px;
-}
+} */
 
 /* description from the API */
 #park-description{
