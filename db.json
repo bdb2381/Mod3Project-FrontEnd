@@ -1,0 +1,23 @@
+{
+  "parks":[ 
+    {
+      "id": 1,
+      "name":"Yellowstone National Park",
+      "state":"WY",
+      "photos_Url":"https://www.nps.gov/common/uploads/structured_data/3C7D2FBB-1DD8-B71B-0BED99731011CFCE.jpg",
+      "description":"Visit Yellowstone and experience the world's first national park. Marvel at a volcano's hidden power rising up in colorful hot springs, mudpots, and geysers. Explore mountains, forests, and lakes to watch wildlife and witness the drama of the natural world unfold. Discover the history that led to the conservation of our national treasures 'for the benefit and enjoyment of the people.",
+      "latitude":"44.59824417",
+      "longitude":"-110.5471695"
+    },
+
+    {
+      "id": 2,
+      "name":"Mt Rainier National Park",
+      "state":"WA",
+      "photos_Url":"https://www.nps.gov/common/uploads/grid_builder/mora/crop16_9/41E6E39A-E609-B50F-1DDA545EE62A0F33.jpg",
+      "description":"Ascending to 14,410 feet above sea level, Mount Rainier stands as an icon in the Washington landscape. An active volcano, Mount Rainier is the most glaciated peak in the contiguous U.S.A., spawning five major rivers. Subalpine wildflower meadows ring the icy volcano while ancient forest cloaks Mount Rainier’s lower slopes. Wildlife abounds in the park’s ecosystems. A lifetime of discovery awaits.",
+      "latitude":"46.853948",
+      "longitude":"-121.760623"
+    }
+  ]
+}
