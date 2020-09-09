@@ -70,7 +70,7 @@ login-form-field::placeholder {
 
 
 
-/* container for map, park, photo, memories */
+/* container for map, park, memories */
 .grid-container{
   display: grid;
   border: .2em solid black;
@@ -100,16 +100,6 @@ login-form-field::placeholder {
   padding: 2%;   
 }
 
-/* holds two columns, the memory list and submit form */
-/* .nest-memories-container{
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-
-} */
-
-/* styles the user submitted memories div */
-/* .memories-list-container{
-} */
 
 /* styles the column of the form to add a memory */
 .memories-submit-form-container{
@@ -185,22 +175,12 @@ textarea {
 
 
 
-/* STYLES THE MAP */
+/* STYLES THE PARK Listings */
 #parks-list-container{
   grid-area: parks-list-container;
   border: .1rem solid #000000;
   height: auto;
 }
-
-/* style the Google Map */
-#map {
-  height: 95%;
-}
-/* end styles of map */
-
-
-
-
 
 
 
@@ -209,9 +189,9 @@ img {
   border: .1rem solid #000000;
   border-radius: 4px;
   /* padding: 5px; */
-  max-width: 80%;
+  max-width: 96%;
   height: auto;
-  margin: 19px 10px 5px 10px;
+  margin: 1px 1px 1px 1px;
 }
 
 
