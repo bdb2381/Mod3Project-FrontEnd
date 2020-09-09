@@ -16,12 +16,14 @@ getParkData()
 
 //////////////////
 // handling functions 
+
+// load markers to the map 
 function handleMapMarkers(park){
   let marker = new google.maps.Marker({
     map: map,
     draggable: true,
     animation: google.maps.Animation.Drop,
-    position: { lat: parseFloat(park.latitude), lng: parseFloat(park.longitude) },
+    position: { lat: parseFloat(park.latitude), lng: parseFloat(park.longitude) },  // parseFloat as json lat/long are stored as strings
     title: park.name,
     label: park.name
   });
@@ -29,12 +31,13 @@ function handleMapMarkers(park){
 
 // load the Google Maps API
 function loadApiSource(){
-  const apiKey = document.querySelector('head')
-  const newTag = document.createElement('script')
+  const headElement = document.querySelector('head')
+  const scriptTag = document.createElement('script')
   
-  newTag.src = `https://maps.googleapis.com/maps/api/js?key=${MapsKey}&callback=initMap`
+  // keeps API out of git via interprolation 
+  scriptTag.src = `https://maps.googleapis.com/maps/api/js?key=${MapsKey}&callback=initMap`
   
-  apiKey.append(newTag)
+  headElement.append(scriptTag)
 }
 
 
