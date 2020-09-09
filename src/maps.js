@@ -1,6 +1,8 @@
 const MapsKey = config.GOOGLE_KEY;
 // config relates to the config{} in configAPI.js
 
+let map;
+
 //////////////////
 //  functions calls
 loadApiSource()
@@ -18,16 +20,20 @@ getParkData()
 // handling functions 
 
 // load markers to the map 
-function handleMapMarkers(park){
-  let marker = new google.maps.Marker({
-    map: map,
-    draggable: true,
-    animation: google.maps.Animation.Drop,
-    position: { lat: parseFloat(park.latitude), lng: parseFloat(park.longitude) },  // parseFloat as json lat/long are stored as strings
-    title: park.name,
-    label: park.name
-  });
+function handleMapMarkers(parks){
+  parks.forEach(park => {
+    let marker = new google.maps.Marker({
+      map: map,
+      draggable: true,
+      animation: google.maps.Animation.Drop,
+      position: { lat: parseFloat(park.latitude), lng: parseFloat(park.longitude) },  // parseFloat as json lat/long are stored as strings
+      title: park.name,
+      label: park.name
+    });
+    
+ })
 }
+
 
 // load the Google Maps API
 function loadApiSource(){
@@ -64,7 +70,7 @@ function getParkData(){
   fetch('http://localhost:3000/parks')
   .then(resp => resp.json())
   .then(parks => {
-    parks.forEach(park => handleMapMarkers(park))
-    
+    handleMapMarkers(parks)
   })
 }
+
