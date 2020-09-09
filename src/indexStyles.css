@@ -34,9 +34,7 @@ body {
 
 /* login button styles */
 #login-form {
-  /* align-self: flex-start;
-  justify-items: right;
-  align-items: right; */
+  
 }
 
 login-form-field::placeholder {
@@ -63,9 +61,6 @@ login-form-field::placeholder {
   cursor: pointer;
 }
 /* end login button styles */
-
-
-
 
 
 
@@ -103,7 +98,7 @@ login-form-field::placeholder {
 
 /* styles the column of the form to add a memory */
 .memories-submit-form-container{
-  /* flex: 1; */
+ 
 }
 
 /* memory form */
@@ -174,24 +169,13 @@ textarea {
 
 
 
-
-/* STYLES THE PARK Listings */
-#parks-list-container{
-  grid-area: parks-list-container;
-  border: .1rem solid #000000;
-  height: auto;
-}
-
-
-
-
 img {
   border: .1rem solid #000000;
   border-radius: 4px;
   /* padding: 5px; */
   max-width: 96%;
   height: auto;
-  margin: 1px 1px 1px 1px;
+  margin: 1px 1px 22px 1px;
 }
 
 
@@ -206,7 +190,29 @@ img {
 }
 
 
-/* STYLES THE PARK CONTENT */
+
+
+
+
+/* STYLES THE PARK Listings Container */
+#parks-list-container{
+  grid-area: parks-list-container;
+  border: .1rem solid #000000;
+  height: auto;
+}
+
+.park-listings{
+
+  
+}
+
+
+
+
+
+
+
+/* STYLES THE A Specific PARK  CONTENT */
 #park-container{
   grid-area: park-container;
     /* border: .1rem solid #000000; */
@@ -217,14 +223,10 @@ img {
     color: #000000; 
     text-align: left;
 }
+
 /* the location of the park as from the API */
 #states{ 
-  margin: 0 0 10px; 
-}
-
-/* the park nickname from the API */
-#park-code{
-  margin: 0 0 10px;
+  margin: 0 0 20px; 
 }
 
 /* url for the park website from API */
@@ -238,7 +240,7 @@ img {
 #park-description{
 font-size: 1.1rem;
 letter-spacing: 0.05em;
-margin: .2em;
+margin: .2em .2em 1em .2em ;
 }
 /* end styles of the PARK CONTAINER */
 
