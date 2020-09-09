@@ -22,6 +22,45 @@ body {
   
 }
 
+
+/* login button styles */
+#login-form {
+  align-self: flex-start;
+  display: grid;
+  justify-items: right;
+  align-items: right;
+}
+
+login-form-field::placeholder {
+  color: #3a3a3a;
+}
+
+.login-form-field {
+  border: none;
+  width: 25%;
+  border-bottom: 1px solid #3a3a3a;
+  margin-bottom: 10px;
+  border-radius: 3px;
+  padding: 0px 0px 5px 5px;
+}
+
+#login-form-submit {
+  width: 25%;
+  padding: 7px;
+  border-radius: 5px;
+  color: white;
+  font-weight: bold;
+  background-color: #3a3a3a;
+  outline: none;
+}
+/* end login button styles */
+
+
+
+
+
+
+
 /* container for map, park, photo, memories */
 .grid-container{
   display: grid;
