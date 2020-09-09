@@ -9,26 +9,34 @@ body {
   height: 100%;
 }
 
-.logo {
-  margin-bottom: 20px;
-}
+
 
 .header{
-  border: .25rem solid #000000;;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-areas: 'logo logo user';
+  grid-template: auto;
+  border: .1rem solid #000000;;
   height: 100px;
   margin-bottom: 1%;
-  background-color: pink; 
+  background-color: #fafafa;; 
   padding: 2%; 
   
 }
 
+#logo{
+  grid-area: logo;
+}
+
+#user{
+  grid-area: user;
+}
 
 /* login button styles */
 #login-form {
-  align-self: flex-start;
-  display: grid;
+  /* align-self: flex-start;
   justify-items: right;
-  align-items: right;
+  align-items: right; */
 }
 
 login-form-field::placeholder {
@@ -37,7 +45,7 @@ login-form-field::placeholder {
 
 .login-form-field {
   border: none;
-  width: 25%;
+  width: 50%;
   border-bottom: 1px solid #3a3a3a;
   margin-bottom: 10px;
   border-radius: 3px;
@@ -45,7 +53,7 @@ login-form-field::placeholder {
 }
 
 #login-form-submit {
-  width: 25%;
+  width: 50%;
   padding: 5px;
   border-radius: 5px;
   color: white;
@@ -107,9 +115,7 @@ form {
   /* Center the form on the page */
   margin: 0 auto;
   width: auto;
-  /* Form outline */
   padding: .5em;
-  border: 1px solid #CCC;
   border-radius: 1em;
 }
 
