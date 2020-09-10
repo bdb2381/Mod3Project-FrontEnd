@@ -1,16 +1,12 @@
 * {
   font-family:  Helvetica, sans-serif;
-  
 }
 
 body {
   padding: 20px;
-  
   background-color: #fafafa;
   height: 100%;
 }
-
-
 
 .header{
   display: grid;
@@ -31,16 +27,38 @@ body {
   font-weight: 500;
   letter-spacing: 0.05em;
   font-family:  Frutiger;
-  text-align: center;
-  padding: 7% 0 0
+  /* text-align: center;
+  padding: 7% 0 0; */
+  margin: auto;
 }
 
+/* create login grid element */
 #user{
   grid-area: user;
 }
 
+/* style the park image */
+img {
+  border: .1rem solid #000000;
+  border-radius: 4px;
+  max-width: 96%;
+  height: auto;
+  margin: 1px 1px 22px 1px;
+}
+
+/* all section titles/headers   */
+ .title{
+  font-size: 26px; 
+  font-weight: 300; 
+  color: #000000; 
+  margin: .2em 0 1em;
+  text-align: center; 
+  font-family: Frutiger;
+}
 
 
+/* ****** */
+/* STYLE LOGIN FORM */
 login-form-field::placeholder {
   color: #3a3a3a;
 }
@@ -68,13 +86,13 @@ login-form-field::placeholder {
 
 
 
-
-/* container for map, park, memories */
+/* ****** */
+/* container for park list, memories list, memory form, park info  */
 .grid-container{
   display: grid;
   border: .2em solid black;
   /* grid-template-columns: auto auto; */
-  grid-template-columns: .5fr 1fr 1fr;
+  grid-template-columns: .7fr 1fr 1fr;
   grid-template-areas:
   'parks-list-container memories-list-container park-container '
   'parks-list-container memories-list-container memories-submit-container-hidden';
@@ -84,12 +102,11 @@ login-form-field::placeholder {
 
 
 
-
-
+/* ****** */
 /* STYLES THE MEMORIES */
 #memories-list-container{
   grid-row: memories-list-container;
-  border: .1rem solid #000000;
+  /* border: .1rem solid #000000; */
   padding: 2%; 
 }
 
@@ -105,7 +122,6 @@ login-form-field::placeholder {
 }
 
 
-
 /* memory form */
 form {
   /* Center the form on the page */
@@ -116,18 +132,16 @@ form {
   border-radius: 1em;
 }
 
+/* memories list */
 ul {
   list-style: none;
   padding: 0;
   margin: 0;
 }
 
-
-
 input, 
 textarea {
-  
-  /* Match form field borders */
+    /* Match form field borders */
   font-size: 16px;
   border: 1px solid #999;
 }
@@ -142,10 +156,6 @@ textarea {
   width: 90%;
 
 }
-
-
-
-
 
 /* style the save memory button */
 .memory-button {
@@ -174,41 +184,18 @@ textarea {
 
 
 
-img {
-  border: .1rem solid #000000;
-  border-radius: 4px;
-  max-width: 96%;
-  height: auto;
-  margin: 1px 1px 22px 1px;
-}
 
-
-
-/* all section titles/headers   */
- .title{
-  font-size: 26px; 
-  font-weight: 300; 
-  color: #000000; 
-  margin: .2em 0 1em;
-  text-align: center; 
-  font-family: Frutiger;
-}
-
-
-
-
-
+/* ****** */
 
 /* STYLES THE PARK Listings Container */
 #parks-list-container{
   grid-area: parks-list-container;
-  border: .1rem solid #000000;
+  /* border: .1rem solid #000000; */
   height: auto;
+  margin: 3%;
 }
 
-
-
-/* STYLES A Specific CONTENT of a PARK */
+/* STYLES  Specific CONTENT of a PARK */
 #park-container{
   grid-area: park-container;
     /* border: .1rem solid #000000; */
@@ -224,13 +211,6 @@ img {
 #state{ 
   margin: 0 0 20px; 
 }
-
-/* url for the park website from API */
-/* #url{
-  text-align: right;
-  color: #eb0b0b;
-  margin: 0 0 10px;
-} */
 
 /* description from the API */
 #park-description{
