@@ -1,126 +1,152 @@
-
-
-
-
-//////////////////
-// function calls
-
-
-
-//////////////////
-// listening functions 
-
-
-
-
-
-
-//////////////////
-//handling functions 
-
-
-
-
-
-//////////////////
-// Manipulate the DOM Functionsgut 
-
-      
-
-
-//////////////////
-// // fetch functions 
-
-
-
-
-
-// clears session storage for fresh login
 sessionStorage.clear()
-const getHeader = document.getElementsByClassName("header")[0]
-sessionStorage.setItem("testpark", 1)
-sessionStorage.setItem("User_id", 1)
-// user login start //
-// need to change memoryForm to whatever the login button is 
-const memoryForm = document.getElementById("form")
-memoryForm.addEventListener("submit",patchNote)
-// fetch request for all current users, changes set word so it can be used in checkUsers
-// function something(event){
-//     event.preventDefault()
-//     setWord = event.target[0].value
-//     fetch(`http://localhost:3000/user`)
-//     .then(res => res.json())
-//     .then(word => checkUsers(word))
-// }
-// checks id new user or old user, if new, calles postUser if old then call get user
-// function checkUsers(array){
-//     // debugger
-//     for(i=0; i<array.length; i++){
-//         if(array[i].name == setWord){
-//             getUsers(array[i])
-//            break 
-//         }
-//     }
-//    postUser()
-// }
-// puts the current user and user id in session storage, can call on in latter fucntions
-// function getUsers(element){
-//     sessionStorage.setItem(element.name , element.id)
-//     debugger
-// }
-// makes post request to and adds user to data base
-// function postUser(){
-//     let data = {name: setWord}
-//     // debugger
-//     fetch(`http://localhost:3000/user`,{
-//         method: "POST",
-//         headers: {'Content-Type':'application/json'},
-//         body: JSON.stringify(data)
-//     })
-// }
-//user login end 
+let setWord = ""
+let setPlace = ""
+const loginButton = document.getElementById("login-form")
+const getYellowstone  = document.getElementById("Yellowstone National Park")
+const namePlacement = document.getElementById("name")
+const statePlacement = document.getElementById("state")
+const descPlacement = document.getElementById("park-description")
+const photoPlacement = document.getElementById("photos_Url")
+let newLi = document.createElement("li")
+const getList = document.getElementById("memories-text")
+const getMountRainer = document.getElementById("Mt Rainier National Park")
+const getForm = document.getElementById("form")
+const hiddenElement = document.getElementById("memories-submit-container-hidden")
 
-// notes process start 
-function getNotes(){
-}
-getNotes()
+getForm.addEventListener("submit", postNote)
+loginButton.addEventListener("submit", setUser)
+getYellowstone.addEventListener("click", getPostInfo )
+getMountRainer.addEventListener("click",getPostInfo)
 
-function patchNote(event){
+
+function setUser(event){
     event.preventDefault()
-    // debugger
-    let data ={text: event.target[0].value,
-               Park_id: sessionStorage.getItem("testpark"),
-               User_id: sessionStorage.getItem("User_id")
-    }
-    fetch(`http://localhost:3000/notes`,{
-                method: "POST",
-                headers: {'Content-Type':'application/json'},
-                body: JSON.stringify(data)
-            })
-            .then(res => res.json())
-            .then (json =>console.log(json))
-            debugger
-    }
+    setWord = event.target[0].value
+    loginButton.reset()
+    getUsers()
+}
 
-
-//test park notes may have to run through all the notes 
-// match up park to to match note Park id 
-function getNotes(){
-    fetch(`http://localhost:3000/notes/1`)
+function getUsers() {
+    fetch(`http://localhost:3000/user`)
     .then(res => res.json())
-    .then(res => setMemories(res))
-    // debugger
+    .then(word => checkUser(word))
 }
 
-const grabOl = document.getElementById("memories holder")
-// const newLi = document.createElement("li")
-
-// note process end 
-
-// sets li items to be notes text
-function setMemories(element){
-    let newLi = document.createElement("li")
-    newLi.innerText = element["text"]
-    grabOl.appendChild(newLi)
-    // debugger
+function checkUser(array) {
+    let test = array.filter( word => word.name == setWord)
+    for(i=0; i<array.length; i++){
+            if(array[i].name == setWord){
+                 setUserSession(array[i])
+            }
+         }
+         if( test.length == 0){
+            postUser()
+         }
 }
+
+function setUserSession(element){
+    sessionStorage.setItem(element.name , element.id)
+    if(setPlace!= ""){
+    let newHash = {id: parseInt(sessionStorage.getItem(setPlace))} 
+    getNotes(newHash)
+    }
+
+
+}
+
+function postUser(){
+    let data = {name: setWord}
+    fetch(`http://localhost:3000/user`,{
+        method: "POST",
+        headers: {'Content-Type':'application/json'},
+        body: JSON.stringify(data)
+    })
+    getUsers()
+}
+
+function getPostInfo(event){
+    fetch(`http://localhost:3000/parks/${event.target.id}`)
+    .then( res => res.json())
+    .then( word => setInfo(word))
+}
+
+function setInfo(hash){
+    setPlace = hash.name
+    getList.innerHTML = " "
+    namePlacement.innerText = hash["name"]
+    statePlacement.innerText = `Location: ${hash["state"]}`
+    descPlacement.innerText = hash["description"]
+    photoPlacement.src = hash["photos_Url"]
+    sessionStorage.setItem(setPlace, hash.id)
+    if(setWord != ""){
+        getNotes(hash)
+    }
+    
+    hiddenElement.id = "memory-submit-container" // show the submit memory form once park is clicked
+
+}
+
+function getNotes(hash){
+    // debugger
+    getList.innerHTML = ""
+    fetch(`http://localhost:3000/notes/${hash.id}`)
+    .then( res => res.json())
+    .then( res => res.forEach(element => { displayNotes(element)}))
+}
+
+function displayNotes(element){
+    if(element.User_id == parseInt(parseInt(sessionStorage.getItem(setWord)))){
+        let newLi = document.createElement("li")
+        newLi.innerText = element.text
+        getList.appendChild(newLi)
+      
+        deleteButton = document.createElement("button")
+        deleteButton.innerText = "delete"
+ 
+        divElement = document.createElement('div') //
+        divElement.appendChild(deleteButton) //
+        newLi.append(divElement) //
+        newLi.id = element.id
+        deleteButton.addEventListener("click", deleteNote) //
+               
+        editButton = document.createElement("button")
+        divElement.appendChild(editButton) //
+        editButton.innerText ="edit"
+        editButton.className = element.id
+        // debugger
+    }
+
+}
+
+function postNote(event){
+    event.preventDefault()
+    
+    //  debugger  
+    if( setWord && setPlace != ""){
+        let data ={ 
+            text: event.target[0].value,
+            User_id: parseInt(sessionStorage.getItem(setWord)),
+            id: parseInt(sessionStorage.getItem(setPlace))
+        }
+        fetch(`http://localhost:3000/notes`,{
+        method: "POST",
+        headers: {'Content-Type':'application/json'},
+        body: JSON.stringify(data)
+        })
+        // debugger
+        getNotes(data)
+    }
+    // debugger
+    getForm.reset()
+
+}
+
+function deleteNote(){
+// debugger
+    fetch(`http://localhost:3000/notes/${event.path[2].id}`,{  //
+        method: `DELETE`
+    })
+    event.path[2].remove()//delete the div and the approprite li content
+    
+}
+
