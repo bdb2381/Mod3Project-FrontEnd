@@ -136,13 +136,9 @@ login-form-field::placeholder {
   ackground: #cce5ff; 
 }
 
-/* .memories-container--hidden{
-  display: none;
-} */
-
 /* style the delete memory button */
 .delete-button{
-  margin: 0 0 0 5px;
+  margin:6px 0px 0px 0px
 }
 
 /* memories list */
@@ -150,12 +146,11 @@ ul {
   list-style: none;
   padding: 0;
   margin: 0;
-  /* background-color: #C5A667; */
 }
 
 /* style a single memory */
 li {
-  margin: 10px 0px;
+  margin: 13px 8px 9px;
   background-color: lightgray;
   padding: 5px;
   letter-spacing: 0.05em;
