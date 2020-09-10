@@ -140,33 +140,6 @@ function deleteNote(){
 
 
 
-//////////////////
-// function displayMemorySubmissionForm(){
-           
-//         const memoryContainer = document.getElementById("memories-submit-container-hidden")
 
-//         memoryContainer.innerHTML = `
-//             <div class="title">
-//             What is Your  Memory?
-//             </div>
-        
-//             <div class="memories-submit-form-container">
-//             <form class="memory-form" id="form" method="post">
-//                 <div>
-//                     <input type =""
-//                     class="memory-input"
-//                     name="memory"
-//                     placeholder="Add your memory..."
-//                     ></input>
-//                 </div>
-//                     <button class="memory-button" type="submit">Save Your Memory</button>
-                
-//             </form>
-//             </div> <!--end submit memories container  -->
-//         `
-     
-        
-       
-//     }
 
     

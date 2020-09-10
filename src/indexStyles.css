@@ -158,8 +158,8 @@ li {
   margin: 10px 0px;
   background-color: lightgray;
   padding: 5px;
+  letter-spacing: 0.05em;
 }
-
 
 input, 
 textarea {
