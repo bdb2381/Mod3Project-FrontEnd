@@ -42,8 +42,10 @@ function checkUser(array) {
 
 function setUserSession(element){
     sessionStorage.setItem(element.name , element.id)
+    if(setPlace!= ""){
     let newHash = {id: parseInt(sessionStorage.getItem(setPlace))} 
     getNotes(newHash)
+    }
 
 
 }
@@ -84,9 +86,16 @@ function getNotes(hash){
 
 function displayNotes(element){
     if(element.User_id == parseInt(parseInt(sessionStorage.getItem(setWord)))){
+        // debugger
         let newLi = document.createElement("li")
         newLi.innerText = element.text
         getList.appendChild(newLi)
+        test = document.createElement("button")
+        newLi.appendChild(test)
+        test.innerText = "delete"
+        newLi.className = element.id
+        newLi.addEventListener("click", deleteNote)
+        // debugger
     }
 
 }
@@ -109,6 +118,14 @@ function postNote(event){
     }
     getForm.reset()
 
+}
+
+function deleteNote(){
+    // debugger
+    fetch(`http://localhost:3000/notes/${event.path[1].className}`,{
+        method: `DELETE`
+    })
+    event.path[1].remove()
 }
 
 
