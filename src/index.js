@@ -102,6 +102,7 @@ function displayNotes(element){
         test = document.createElement("button")
         newLi.appendChild(test)
         test.innerText = "delete"
+        test.className="delete-button"
         newLi.className = element.id
         newLi.addEventListener("click", deleteNote)
         // debugger

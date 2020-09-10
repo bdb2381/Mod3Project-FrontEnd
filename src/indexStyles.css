@@ -56,6 +56,20 @@ img {
   font-family: Frutiger;
 }
 
+/* FORM styling */
+form {
+  /* Center the form on the page */
+  width: auto;
+  padding: .5em;
+  margin: 0 .5em;
+  /* border-radius: 1em; */
+  /* border: 1px solid ; */
+}
+
+
+
+
+
 
 /* ****** */
 /* STYLE LOGIN FORM */
@@ -103,10 +117,10 @@ login-form-field::placeholder {
 
 
 /* ****** */
-/* STYLES THE MEMORIES */
+/* STYLES THE MEMORIES LISTING & FORM */
 #memories-list-container{
   grid-row: memories-list-container;
-  /* border: .1rem solid #000000; */
+  border: .1rem solid #000000;
   padding: 2%; 
 }
 
@@ -118,18 +132,17 @@ login-form-field::placeholder {
 
 /* hides the memory submit until login */
 #memories-submit-container-hidden{
-  display: none;   
+  display: none;  
+  ackground: #cce5ff; 
 }
 
+/* .memories-container--hidden{
+  display: none;
+} */
 
-/* memory form */
-form {
-  /* Center the form on the page */
-  margin: 0 auto;
-  width: auto;
-  padding: .5em;
-  margin: 0 0 .5em;
-  border-radius: 1em;
+/* style the delete memory button */
+.delete-button{
+  margin: 0 0 0 5px;
 }
 
 /* memories list */
@@ -137,7 +150,16 @@ ul {
   list-style: none;
   padding: 0;
   margin: 0;
+  /* background-color: #C5A667; */
 }
+
+/* style a single memory */
+li {
+  margin: 10px 0px;
+  background-color: lightgray;
+  padding: 5px;
+}
+
 
 input, 
 textarea {
@@ -146,26 +168,23 @@ textarea {
   border: 1px solid #999;
 }
 
-
-textarea {
-  /* Align multiline text fields with their labels */
+/* style the memory form text area */
+.memory-input {
   vertical-align: top;
-  padding: 10px 20px;
-  /* Provide space to type some text */
+  padding: 9px;
   height: 8em;
   width: 90%;
-
 }
 
 /* style the save memory button */
 .memory-button {
   font-size: 0.8rem;
   font-weight: 600;
-  /* color: rgb(92, 114, 238); */
   color: #2D3517;
   cursor: pointer;
   transition: color 300ms;
   margin: 1em;
+  width: 90%;
 }
 
 .memory-button:hover {
@@ -209,7 +228,7 @@ textarea {
 
 /* the location of the park as from the API */
 #state{ 
-  margin: 0 0 20px; 
+  margin: .2em .2em 1em .2em ; 
 }
 
 /* description from the API */
@@ -231,6 +250,3 @@ margin: .2em .2em 1em .2em ;
   margin-top: 1%;
 }
 
-.memories-container--hidden{
-  display: none;
-}
