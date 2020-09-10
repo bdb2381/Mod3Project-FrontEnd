@@ -108,7 +108,8 @@ function displayNotes(element){
         // newLi.appendChild(test)
         
         newLi.id = element.id
-        newLi.addEventListener("click", deleteNote)
+        // newLi.addEventListener("click", deleteNote)
+        test.addEventListener("click", deleteNote) //
         // debugger
     }
 
@@ -135,11 +136,12 @@ function postNote(event){
 }
 
 function deleteNote(){
-// debugger
+debugger
     fetch(`http://localhost:3000/notes/${event.path[2].id}`,{
         method: `DELETE`
     })
     event.path[2].remove()//delete the div and the approprite li content
+    
 }
 
 

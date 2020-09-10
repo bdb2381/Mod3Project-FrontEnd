@@ -27,8 +27,6 @@ body {
   font-weight: 500;
   letter-spacing: 0.05em;
   font-family:  Frutiger;
-  /* text-align: center;
-  padding: 7% 0 0; */
   margin: auto;
 }
 
@@ -62,8 +60,6 @@ form {
   width: auto;
   padding: .5em;
   margin: 0 .5em;
-  /* border-radius: 1em; */
-  /* border: 1px solid ; */
 }
 
 
@@ -104,7 +100,7 @@ login-form-field::placeholder {
 /* container for park list, memories list, memory form, park info  */
 .grid-container{
   display: grid;
-  border: .2em solid black;
+  border: .1em solid black;
   /* grid-template-columns: auto auto; */
   grid-template-columns: .7fr 1fr 1fr;
   grid-template-areas:
@@ -120,8 +116,6 @@ login-form-field::placeholder {
 /* STYLES THE MEMORIES LISTING & FORM */
 #memories-list-container{
   grid-row: memories-list-container;
-  border: .1rem solid #000000;
-  padding: 2%; 
 }
 
 #memories-submit-container{
@@ -152,7 +146,7 @@ ul {
 li {
   margin: 13px 8px 9px;
   background-color: lightgray;
-  padding: 5px;
+  padding: 5%;
   letter-spacing: 0.05em;
 }
 
@@ -244,10 +238,10 @@ margin: .2em .2em 1em .2em ;
 
 
 .footer{
-  border: .25rem solid #000000;
+  /* border: .25rem solid #000000; */
   height: 50px;
   clear: both;
   padding: 2%; 
-  margin-top: 1%;
+  margin: auto;
 }
 
