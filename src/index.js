@@ -87,6 +87,7 @@ function setInfo(hash){
 }
 
 function getNotes(hash){
+    // debugger
     getList.innerHTML = ""
     fetch(`http://localhost:3000/notes/${hash.id}`)
     .then( res => res.json())
@@ -98,20 +99,29 @@ function displayNotes(element){
         let newLi = document.createElement("li")
         newLi.innerText = element.text
         getList.appendChild(newLi)
-        test = document.createElement("button")
-        test.innerText = "delete"
-        test.className="delete-button"
+      
+        deleteButton = document.createElement("button")
+        deleteButton.innerText = "delete"
+ 
         divElement = document.createElement('div') //
-        divElement.appendChild(test) //
+        divElement.appendChild(deleteButton) //
         newLi.append(divElement) //
         newLi.id = element.id
-        test.addEventListener("click", deleteNote) //
+        deleteButton.addEventListener("click", deleteNote) //
+               
+        editButton = document.createElement("button")
+        divElement.appendChild(editButton) //
+        editButton.innerText ="edit"
+        editButton.className = element.id
+        // debugger
     }
 
 }
 
 function postNote(event){
     event.preventDefault()
+    
+    //  debugger  
     if( setWord && setPlace != ""){
         let data ={ 
             text: event.target[0].value,
@@ -123,9 +133,10 @@ function postNote(event){
         headers: {'Content-Type':'application/json'},
         body: JSON.stringify(data)
         })
-        newLi.innerText = data.text
-        getList.appendChild(newLi)
+        // debugger
+        getNotes(data)
     }
+    // debugger
     getForm.reset()
 
 }
