@@ -9,11 +9,13 @@ let newLi = document.createElement("li")
 const getList = document.getElementById("memories-text")
 const getMountRainer = document.getElementById("Mt Rainier National Park")
 const getForm = document.getElementById("form")
+const hiddenElement = document.getElementById("memories-submit-container-hidden")
 
 getForm.addEventListener("submit", postNote)
 loginButton.addEventListener("submit", setUser)
 getYellowstone.addEventListener("click", getPostInfo )
 getMountRainer.addEventListener("click",getPostInfo)
+
 
 function setUser(event){
     event.preventDefault()
@@ -75,6 +77,9 @@ function setInfo(hash){
     if(setWord != ""){
         getNotes(hash)
     }
+    
+    hiddenElement.id = "memory-submit-container"
+
 }
 
 function getNotes(hash){
@@ -130,4 +135,33 @@ function deleteNote(){
 
 
 
- 
+//////////////////
+// function displayMemorySubmissionForm(){
+           
+//         const memoryContainer = document.getElementById("memories-submit-container-hidden")
+
+//         memoryContainer.innerHTML = `
+//             <div class="title">
+//             What is Your  Memory?
+//             </div>
+        
+//             <div class="memories-submit-form-container">
+//             <form class="memory-form" id="form" method="post">
+//                 <div>
+//                     <input type =""
+//                     class="memory-input"
+//                     name="memory"
+//                     placeholder="Add your memory..."
+//                     ></input>
+//                 </div>
+//                     <button class="memory-button" type="submit">Save Your Memory</button>
+                
+//             </form>
+//             </div> <!--end submit memories container  -->
+//         `
+     
+        
+       
+//     }
+
+    
