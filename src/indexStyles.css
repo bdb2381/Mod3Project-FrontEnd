@@ -1,5 +1,6 @@
 * {
   font-family:  Helvetica, sans-serif;
+  
 }
 
 body {
@@ -29,6 +30,7 @@ body {
   font-size: 5em;
   font-weight: 500;
   letter-spacing: 0.05em;
+  font-family:  Frutiger;
 }
 
 #user{
@@ -59,7 +61,7 @@ login-form-field::placeholder {
   border-radius: 5px;
   color: white;
   font-weight: bold;
-  background-color: #3a3a3a;
+  background-color: #934E19;
   outline: none;
   cursor: pointer;
 }
@@ -153,18 +155,19 @@ textarea {
 .memory-button {
   font-size: 0.8rem;
   font-weight: 600;
-  color: rgb(92, 114, 238);
+  /* color: rgb(92, 114, 238); */
+  color: #2D3517;
   cursor: pointer;
   transition: color 300ms;
   margin: 1em;
 }
 
 .memory-button:hover {
-  color: rgb(37, 68, 245);
+  color: #668D67;
 }
 
 .memory-button:active {
-  color: rgb(127, 146, 250);
+  color: #C5A667;
 }
 
 .memory-button:focus {
@@ -192,6 +195,7 @@ img {
   color: #000000; 
   margin: .2em 0 1em;
   text-align: center; 
+  font-family: Frutiger;
 }
 
 
