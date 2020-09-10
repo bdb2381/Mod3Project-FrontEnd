@@ -4,8 +4,6 @@
     <meta charset="utf-8" />
     <title>Park Memories</title>
     <link rel="stylesheet" type="text/css" href="src/indexStyles.css" />
-    <script src="src/index.js"></script>
-    
   </head>
   
   <body>
@@ -36,21 +34,21 @@
       </div><!--end parks list container  -->
 
       <div id="park-container">
-        <div class="title" id="name">Yellowstone National Park
+        <div class="title" id="name">
         </div>
-        <div id="photos_Url">
-            <img src="https://www.nps.gov/common/uploads/grid_builder/yell/crop16_9/41860828-1DD8-B71B-0B9296FEBFFF0D90.jpg?width=465&quality=90&mode=crop">
+        <div >
+            <img id = "photos_Url" src="">
         </div>
 
-        <div id="state">Location: WY
+        <div id="state">
         </div>
         
         <div id="park-description">
-          Visit Yellowstone and experience the world's first national park. Marvel at a volcano's hidden power rising up in colorful hot springs, mudpots, and geysers. Explore mountains, forests, and lakes to watch wildlife and witness the drama of the natural world unfold. Discover the history that led to the conservation of our national treasures 'for the benefit and enjoyment of the people.'
+
         </div>
       </div><!--end park container  -->
         
-      <div id="memories-container">
+      <div id="memories-container--hidden">
         <div class="title">
           What is Your  Memory?
         </div>
@@ -58,15 +56,13 @@
         <div class="memories-submit-form-container">
             <form class="memory-form" id="form" method="post">
               <div>
-                  <textarea
+                  <input type =""
                   class="memory-input"
                   name="memory"
                   placeholder="Add your memory..."
-                  ></textarea>
+                  ></input>
                 </div>
-                <div>
                   <button class="memory-button" type="submit">Save Your Memory</button>
-                </div>
                 
             </form>
           </div> <!--end submit memories container  -->
@@ -74,7 +70,7 @@
       
       <div id="memories-list-container">
         <div >
-            memories list container area
+            <!-- memories list container area -->
             <ul id="memories-text">
             </ul>
         </div>
@@ -90,6 +86,6 @@
     
 
   <div class="footer">© 2020</div>
-      
+  <script src="src/index.js"></script>
   </body>
 </html>

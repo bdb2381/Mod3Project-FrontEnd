@@ -38,9 +38,9 @@ body {
 }
 
 /* login button styles */
-#login-form {
+/* #login-form {
   
-}
+} */
 
 login-form-field::placeholder {
   color: #3a3a3a;
@@ -102,9 +102,9 @@ login-form-field::placeholder {
 
 
 /* styles the column of the form to add a memory */
-.memories-submit-form-container{
+/* .memories-submit-form-container{
  
-}
+} */
 
 /* memory form */
 form {
@@ -253,4 +253,8 @@ margin: .2em .2em 1em .2em ;
   clear: both;
   padding: 2%; 
   margin-top: 1%;
+}
+
+.memories-container--hidden{
+  display: none;
 }
