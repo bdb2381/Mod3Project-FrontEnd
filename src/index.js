@@ -82,7 +82,7 @@ function setInfo(hash){
         getNotes(hash)
     }
     
-    hiddenElement.id = "memory-submit-container"
+    hiddenElement.id = "memory-submit-container" // show the submit memory form once park is clicked
 
 }
 
@@ -100,10 +100,14 @@ function displayNotes(element){
         newLi.innerText = element.text
         getList.appendChild(newLi)
         test = document.createElement("button")
-        newLi.appendChild(test)
         test.innerText = "delete"
         test.className="delete-button"
-        newLi.className = element.id
+        divElement = document.createElement('div') //
+        divElement.appendChild(test) //
+        newLi.append(divElement) //
+        // newLi.appendChild(test)
+        
+        newLi.id = element.id
         newLi.addEventListener("click", deleteNote)
         // debugger
     }
@@ -131,11 +135,11 @@ function postNote(event){
 }
 
 function deleteNote(){
-    // debugger
-    fetch(`http://localhost:3000/notes/${event.path[1].className}`,{
+// debugger
+    fetch(`http://localhost:3000/notes/${event.path[2].id}`,{
         method: `DELETE`
     })
-    event.path[1].remove()
+    event.path[2].remove()//delete the div and the approprite li content
 }
 
 
