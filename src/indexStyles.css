@@ -100,15 +100,12 @@ login-form-field::placeholder {
   padding: 2%;
 }
 
+/* hides the memory submit until login */
 #memories-submit-container-hidden{
   display: none;   
-
 }
 
-/* styles the column of the form to add a memory */
-/* .memories-submit-form-container{
- 
-} */
+
 
 /* memory form */
 form {

@@ -4,6 +4,8 @@ let setPlace = ""
 const loginButton = document.getElementById("login-form")
 const getYellowstone  = document.getElementById("Yellowstone National Park")
 const namePlacement = document.getElementById("name")
+const statePlacement = document.getElementById("state")
+const descPlacement = document.getElementById("park-description")
 const photoPlacement = document.getElementById("photos_Url")
 let newLi = document.createElement("li")
 const getList = document.getElementById("memories-text")
@@ -71,7 +73,9 @@ function getPostInfo(event){
 function setInfo(hash){
     setPlace = hash.name
     getList.innerHTML = " "
-    namePlacement.innerText = hash["description"]
+    namePlacement.innerText = hash["name"]
+    statePlacement.innerText = `Location: ${hash["state"]}`
+    descPlacement.innerText = hash["description"]
     photoPlacement.src = hash["photos_Url"]
     sessionStorage.setItem(setPlace, hash.id)
     if(setWord != ""){
