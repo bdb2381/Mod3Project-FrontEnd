@@ -114,11 +114,7 @@ function postNote(event){
         headers: {'Content-Type':'application/json'},
         body: JSON.stringify(data)
         })
-        // debugger 
         getNotes(data)
-        // newLi.innerText = data.text
-        // getList.appendChild(newLi)
-        // debugger
     }
     // debugger
     getForm.reset()
