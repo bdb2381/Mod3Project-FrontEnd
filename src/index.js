@@ -95,7 +95,6 @@ function getNotes(hash){
 
 function displayNotes(element){
     if(element.User_id == parseInt(parseInt(sessionStorage.getItem(setWord)))){
-        // debugger
         let newLi = document.createElement("li")
         newLi.innerText = element.text
         getList.appendChild(newLi)
@@ -105,12 +104,8 @@ function displayNotes(element){
         divElement = document.createElement('div') //
         divElement.appendChild(test) //
         newLi.append(divElement) //
-        // newLi.appendChild(test)
-        
         newLi.id = element.id
-        // newLi.addEventListener("click", deleteNote)
         test.addEventListener("click", deleteNote) //
-        // debugger
     }
 
 }
@@ -136,8 +131,8 @@ function postNote(event){
 }
 
 function deleteNote(){
-debugger
-    fetch(`http://localhost:3000/notes/${event.path[2].id}`,{
+// debugger
+    fetch(`http://localhost:3000/notes/${event.path[2].id}`,{  //
         method: `DELETE`
     })
     event.path[2].remove()//delete the div and the approprite li content
