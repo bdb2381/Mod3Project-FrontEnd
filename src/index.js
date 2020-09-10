@@ -78,6 +78,7 @@ function setInfo(hash){
 }
 
 function getNotes(hash){
+    debugger
     getList.innerHTML = ""
     fetch(`http://localhost:3000/notes/${hash.id}`)
     .then( res => res.json())
@@ -113,9 +114,13 @@ function postNote(event){
         headers: {'Content-Type':'application/json'},
         body: JSON.stringify(data)
         })
-        newLi.innerText = data.text
-        getList.appendChild(newLi)
+        // debugger 
+        getNotes(data)
+        // newLi.innerText = data.text
+        // getList.appendChild(newLi)
+        // debugger
     }
+    // debugger
     getForm.reset()
 
 }
