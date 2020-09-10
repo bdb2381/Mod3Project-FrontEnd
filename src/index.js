@@ -13,6 +13,30 @@
 
 
 
+<<<<<<< HEAD
+=======
+function displayNotes(element){
+    if(element.User_id == parseInt(parseInt(sessionStorage.getItem(setWord)))){
+        let newLi = document.createElement("li")
+        newLi.innerText = element.text
+        getList.appendChild(newLi)
+      
+        deleteButton = document.createElement("button")
+        deleteButton.innerText = "delete"
+ 
+        divElement = document.createElement('div') //
+        divElement.appendChild(deleteButton) //
+        newLi.append(divElement) //
+        newLi.id = element.id
+        deleteButton.addEventListener("click", deleteNote) //
+               
+        editButton = document.createElement("button")
+        divElement.appendChild(editButton) //
+        editButton.innerText ="edit"
+        editButton.className = element.id
+        // debugger
+    }
+>>>>>>> 4fbc7956dab2e92b2cfbd61f66266277906693db
 
 
 //////////////////
@@ -85,8 +109,29 @@ function getNotes(){
 }
 getNotes()
 
+<<<<<<< HEAD
 function patchNote(event){
     event.preventDefault()
+=======
+function postNote(event){
+    event.preventDefault()
+    
+    //  debugger  
+    if( setWord && setPlace != ""){
+        let data ={ 
+            text: event.target[0].value,
+            User_id: parseInt(sessionStorage.getItem(setWord)),
+            id: parseInt(sessionStorage.getItem(setPlace))
+        }
+        fetch(`http://localhost:3000/notes`,{
+        method: "POST",
+        headers: {'Content-Type':'application/json'},
+        body: JSON.stringify(data)
+        })
+        // debugger
+        getNotes(data)
+    }
+>>>>>>> 4fbc7956dab2e92b2cfbd61f66266277906693db
     // debugger
     let data ={text: event.target[0].value,
                Park_id: sessionStorage.getItem("testpark"),
