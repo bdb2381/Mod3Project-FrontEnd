@@ -5,7 +5,7 @@
 
 body {
   padding: 20px;
-  text-align: center;
+  
   background-color: #fafafa;
   height: 100%;
 }
@@ -31,16 +31,15 @@ body {
   font-weight: 500;
   letter-spacing: 0.05em;
   font-family:  Frutiger;
+  text-align: center;
+  padding: 7% 0 0
 }
 
 #user{
   grid-area: user;
 }
 
-/* login button styles */
-/* #login-form {
-  
-} */
+
 
 login-form-field::placeholder {
   color: #3a3a3a;
@@ -48,7 +47,7 @@ login-form-field::placeholder {
 
 .login-form-field {
   border: none;
-  width: 50%;
+  width: 78%;
   border-bottom: 1px solid #3a3a3a;
   margin-bottom: 10px;
   border-radius: 3px;
@@ -56,7 +55,7 @@ login-form-field::placeholder {
 }
 
 #login-form-submit {
-  width: 50%;
+  width: 78%;
   padding: 5px;
   border-radius: 5px;
   color: white;
@@ -127,11 +126,7 @@ ul {
 
 input, 
 textarea {
-  /* To make sure that all text fields have the same font settings
-
-  width: 100%;
-  height: auto;
-  box-sizing: border-box;
+  
   /* Match form field borders */
   font-size: 16px;
   border: 1px solid #999;
