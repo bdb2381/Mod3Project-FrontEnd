@@ -4,92 +4,92 @@
     <meta charset="utf-8" />
     <title>Park Memories</title>
     <link rel="stylesheet" type="text/css" href="src/indexStyles.css" />
-   
-    <!-- <script  type='text/javascript' src='src/configAPI.js'></script> -->
-    <script defer type="text/javascript"  src="src/index.js"></script>
-    <!-- <script defer type="text/javascript"  src="src/maps.js"></script> -->
+    <script src="src/index.js"></script>
     
   </head>
   
   <body>
 
-  <div class="header"><nav></nav>
-    <form id="login-form">
-      <input type="text" name="username" id="username-field" class="login-form-field" placeholder="Enter Username">
-      <input type="submit" value="Login" id="login-form-submit">
-    </form>
-  </div>
+  <div class="header">
+    <div id="logo"> Park Memories</div>
+    <div id="user">
+      <form id="login-form">
+        <div>
+          <input type="text" name="username" id="username-field" class="login-form-field" placeholder="Enter Username">
+        </div>
+        <div>
+          <input type="submit" value="Login" id="login-form-submit">
+        </div>
+      </form>
+    </div>
+  </div><!--end header container  -->
   
     <div class="grid-container">
-      <div id="map-container">
-        <div id="map">
-    
+
+      <div id="parks-list-container">
+        <div class="title" id="Yellowstone National Park">
+              Yellowstone National Park
         </div>
-      </div>
+        <div class="title" id="Mt Rainier National Park">
+          Mt Rainier National Park
+    </div>
+      </div><!--end parks list container  -->
+
       <div id="park-container">
-        <div class="title">Yellowstone National Park
+        <div class="title" id="name">Yellowstone National Park
         </div>
-        <div id="states"><span>Location:</span>
-          ID, MT, WY
+        <div id="photos_Url">
+            <img src="https://www.nps.gov/common/uploads/grid_builder/yell/crop16_9/41860828-1DD8-B71B-0B9296FEBFFF0D90.jpg?width=465&quality=90&mode=crop">
         </div>
-        <div id="park-code"><span>Nickname: </span> Yell <span id="url"><a href="https://www.nps.gov/yell/index.htm">Website</a></span>
+
+        <div id="state">Location: WY
         </div>
+        
         <div id="park-description">
           Visit Yellowstone and experience the world's first national park. Marvel at a volcano's hidden power rising up in colorful hot springs, mudpots, and geysers. Explore mountains, forests, and lakes to watch wildlife and witness the drama of the natural world unfold. Discover the history that led to the conservation of our national treasures 'for the benefit and enjoyment of the people.'
         </div>
-      </div>
+      </div><!--end park container  -->
         
       <div id="memories-container">
         <div class="title">
-          Park Memories
+          What is Your  Memory?
         </div>
-        <div class="nest-memories-container">
-          <div class="memories-list-container">
-            memories list container area
-            <ul id="memories holder">
-              
-            </ul>
-          </div>
-          <div class="memories-submit-form-container">
-            submit form
+       
+        <div class="memories-submit-form-container">
             <form class="memory-form" id="form" method="post">
-              <ul>
-                <li>
+              <div>
                   <textarea
                   class="memory-input"
                   name="memory"
                   placeholder="Add your memory..."
                   ></textarea>
-                </li>
-                <li>
-
+                </div>
+                <div>
                   <button class="memory-button" type="submit">Save Your Memory</button>
-                </li>
-              </ul>
+                </div>
+                
             </form>
-          </div>
+          </div> <!--end submit memories container  -->
+      </div><!--end submit form container  -->
+      
+      <div id="memories-list-container">
+        <div >
+            memories list container area
+            <ul id="memories-text">
+            </ul>
         </div>
-      </div>
+      </div> <!--end memories list container  -->
+      
+      
+      </div>  <!--end grid container  -->
 
-      <div id="photos-container">
-        <div class="title">Photos</class>
-        </div>
-        <div>        
-          <img src="https://www.nps.gov/common/uploads/structured_data/3C7D34E6-1DD8-B71B-0BBB1C0F478318E2.jpg" >
-          <i>Bison in Lamar Valley</i>
-        </div>
-        
-        <div>
-          <img src="https://www.nps.gov/common/uploads/structured_data/3C7D2FBB-1DD8-B71B-0BED99731011CFCE.jpg">
-          <i>Aurum Geyser Erupting</i>
-        </div>
+      
 
 
 
-      </div>
-    </div>
+    
 
-  <div class="footer">footer</div>
+  <div class="footer">© 2020</div>
       
   </body>
 </html>
