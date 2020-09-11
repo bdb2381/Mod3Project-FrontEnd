@@ -102,14 +102,41 @@ login-form-field::placeholder {
   display: grid;
   border: .1em solid black;
   /* grid-template-columns: auto auto; */
-  grid-template-columns: .7fr 1fr 1fr;
+  
+  
+  grid-template-columns: 1fr ;
   grid-template-areas:
-  'parks-list-container memories-list-container park-container '
-  'parks-list-container memories-list-container memories-submit-container-hidden';
+  'parks-list-container'
+  'park-container'
+  'memories-submit-container-hidden' 
+  'memories-list-container';
+
   grid-gap: .25rem;
   grid-template: auto;
 }
 
+@media (min-width: 500px) {
+  .grid-container {
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: 
+    'parks-list-container park-container'
+    'memories-list-container memories-submit-container-hidden';
+  }
+  
+}
+
+@media (min-width: 700px) {
+.grid-container{
+    display: grid;
+    border: .1em solid black;
+    grid-template-columns: .7fr 1fr 1fr;
+    grid-template-areas:
+    'parks-list-container memories-list-container park-container '
+    'parks-list-container memories-list-container memories-submit-container-hidden';
+    grid-gap: .25rem;
+    grid-template: auto;
+  }
+}
 
 
 /* ****** */
