@@ -4,7 +4,7 @@
 
 body {
   padding: 20px;
-  background-color: #fafafa;
+  background-color: #ecfaf0;
   height: 100%;
 }
 
@@ -16,7 +16,6 @@ body {
   border: .1rem solid #000000;;
   height: 100px;
   margin-bottom: 1%;
-  background-color: #fafafa;; 
   padding: 2%; 
   
 }
@@ -110,14 +109,14 @@ login-form-field::placeholder {
   grid-template: auto;
 }
 
-@media (min-width: 500px) {
+@media (min-width: 550px) {
   .grid-container {
     grid-template-columns: 1fr 1fr;
     grid-template-areas: 
     'parks-list-container park-container'
     'memories-list-container memories-submit-container-hidden';
+    height: 1000px;
   }
-  
 }
 
 @media (min-width: 700px) {
@@ -225,8 +224,6 @@ textarea {
 /* STYLES THE PARK Listings Container */
 #parks-list-container{
   grid-area: parks-list-container;
-  /* border: .1rem solid #000000; */
-  height: auto;
   margin: 3%;
 }
 
@@ -239,8 +236,6 @@ textarea {
 /* STYLES  Specific CONTENT of a PARK */
 #park-container{
   grid-area: park-container;
-    /* border: .1rem solid #000000; */
-    height: auto;
     padding: 2%; 
     font-size: 20px; 
     font-weight: 300; 
@@ -263,9 +258,8 @@ margin: .2em .2em 1em .2em ;
 
 
 
-
+/* ****** */
 .footer{
-  /* border: .25rem solid #000000; */
   height: 50px;
   clear: both;
   padding: 2%; 
