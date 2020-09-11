@@ -37,7 +37,6 @@ body {
 
 /* style the park image */
 img {
-  border: .1rem solid #000000;
   border-radius: 4px;
   max-width: 96%;
   height: auto;
@@ -101,9 +100,6 @@ login-form-field::placeholder {
 .grid-container{
   display: grid;
   border: .1em solid black;
-  /* grid-template-columns: auto auto; */
-  
-  
   grid-template-columns: 1fr ;
   grid-template-areas:
   'parks-list-container'
@@ -143,6 +139,8 @@ login-form-field::placeholder {
 /* STYLES THE MEMORIES LISTING & FORM */
 #memories-list-container{
   grid-row: memories-list-container;
+  height: 500px;
+  overflow: auto;
 }
 
 #memories-submit-container{
@@ -175,6 +173,7 @@ li {
   background-color: lightgray;
   padding: 5%;
   letter-spacing: 0.05em;
+  border-radius: 4px;
 }
 
 input, 
@@ -182,6 +181,7 @@ textarea {
     /* Match form field borders */
   font-size: 16px;
   border: 1px solid #999;
+  border-radius: 4px;
 }
 
 /* style the memory form text area */
