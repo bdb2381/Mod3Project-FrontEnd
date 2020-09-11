@@ -156,8 +156,8 @@ login-form-field::placeholder {
 }
 
 /* style the delete memory button */
-.delete-button{
-  margin:6px 0px 0px 0px
+.delete-edit-button{
+  margin:10px 10px 0px 0px
 }
 
 /* memories list */

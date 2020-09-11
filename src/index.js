@@ -87,7 +87,7 @@ function setInfo(hash){
 }
 
 function getNotes(hash){
-    // debugger
+    debugger
     getList.innerHTML = ""
     fetch(`http://localhost:3000/notes/${hash.id}`)
     .then( res => res.json())
@@ -95,6 +95,7 @@ function getNotes(hash){
 }
 
 function displayNotes(element){
+debugger
     if(element.User_id == parseInt(parseInt(sessionStorage.getItem(setWord)))){
         let newLi = document.createElement("li")
         newLi.innerText = element.text
@@ -102,7 +103,7 @@ function displayNotes(element){
       
         deleteButton = document.createElement("button")
         deleteButton.innerText = "delete"
- 
+        deleteButton.className = "delete-edit-button"
         divElement = document.createElement('div') //
         divElement.appendChild(deleteButton) //
         newLi.append(divElement) //
@@ -112,6 +113,7 @@ function displayNotes(element){
         editButton = document.createElement("button")
         divElement.appendChild(editButton) //
         editButton.innerText ="edit"
+        // editButton.className="delete-edit-button"
         editButton.className = element.id
         editButton.addEventListener("click",patchComment)
         // debugger
@@ -157,11 +159,12 @@ function patchComment(event){
             text: "This comment is approved by the park, happy commenting",
             id: parseInt(sessionStorage.getItem(setPlace))
         }
-    fetch(`http://localhost:3000/notes/${event.target.className}}`,{
+    fetch(`http://localhost:3000/notes/${event.target.className})`,{
        method: `PATCH`,
        headers: {'Content-Type':'application/json'},
        body: JSON.stringify(data)
-    })
+    }) 
+    debugger
     getNotes(data)
 }
 
