@@ -106,7 +106,6 @@ login-form-field::placeholder {
   'park-container'
   'memories-submit-container-hidden' 
   'memories-list-container';
-
   grid-gap: .25rem;
   grid-template: auto;
 }
@@ -131,6 +130,7 @@ login-form-field::placeholder {
     'parks-list-container memories-list-container memories-submit-container-hidden';
     grid-gap: .25rem;
     grid-template: auto;
+    height: 1000px;
   }
 }
 
@@ -139,8 +139,8 @@ login-form-field::placeholder {
 /* STYLES THE MEMORIES LISTING & FORM */
 #memories-list-container{
   grid-row: memories-list-container;
-  height: 500px;
-  overflow: auto";
+  height: auto;
+  overflow: auto;
 }
 
 #memories-submit-container{
