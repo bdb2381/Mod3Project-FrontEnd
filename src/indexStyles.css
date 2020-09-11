@@ -152,7 +152,7 @@ login-form-field::placeholder {
 /* hides the memory submit until login */
 #memories-submit-container-hidden{
   display: none;  
-  ackground: #cce5ff; 
+  background: #cce5ff; 
 }
 
 /* style the delete memory button */

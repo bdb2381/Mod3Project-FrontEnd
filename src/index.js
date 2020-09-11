@@ -113,6 +113,7 @@ function displayNotes(element){
         divElement.appendChild(editButton) //
         editButton.innerText ="edit"
         editButton.className = element.id
+        editButton.addEventListener("click",patchComment)
         // debugger
     }
 
@@ -150,8 +151,17 @@ function deleteNote(){
     
 }
 
+function patchComment(event){
+    // debugger
+        let data = {
+            text: "This comment is approved by the park, happy commenting",
+            id: parseInt(sessionStorage.getItem(setPlace))
+        }
+    fetch(`http://localhost:3000/notes/${event.target.className}}`,{
+       method: `PATCH`,
+       headers: {'Content-Type':'application/json'},
+       body: JSON.stringify(data)
+    })
+    getNotes(data)
+}
 
-
-
-
-    
