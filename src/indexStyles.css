@@ -140,7 +140,7 @@ login-form-field::placeholder {
 #memories-list-container{
   grid-row: memories-list-container;
   height: 500px;
-  overflow: auto;
+  overflow: auto";
 }
 
 #memories-submit-container{
